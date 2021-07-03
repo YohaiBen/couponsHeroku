@@ -11,7 +11,7 @@
 	<groupId>com.yohai</groupId>
 	<artifactId>CouponsProject-Chapter-3-Demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>CouponsProject-Chapter-3-Demo</name>
 	<description>Demo project for Spring REST</description>
 
