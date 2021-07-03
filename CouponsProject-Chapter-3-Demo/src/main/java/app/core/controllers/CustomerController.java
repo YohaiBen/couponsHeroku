@@ -23,7 +23,7 @@ import app.core.sessions.SessionContextManager;
 import app.core.system.exceptions.CouponSystemException;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin("*")
 @RequestMapping("/api/customer")
 public class CustomerController {
 

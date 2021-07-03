@@ -26,7 +26,7 @@ import app.core.sessions.SessionContextManager;
 import app.core.system.exceptions.CouponSystemException;
 
 @RestController
-@CrossOrigin()
+@CrossOrigin("*")
 @RequestMapping("/api/admin")
 public class AdminController {
 

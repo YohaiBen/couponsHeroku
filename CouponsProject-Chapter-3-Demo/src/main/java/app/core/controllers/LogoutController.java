@@ -13,7 +13,7 @@ import app.core.sessions.SessionContextManager;
 import app.core.system.exceptions.CouponSystemException;
 
 @RestController
-@CrossOrigin
+@CrossOrigin("*")
 @RequestMapping("/api/client")
 public class LogoutController {
 
