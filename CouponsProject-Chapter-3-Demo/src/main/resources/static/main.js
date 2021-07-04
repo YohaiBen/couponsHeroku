@@ -1436,7 +1436,7 @@ class LoginService {
     login(userEmail, userPass, clientType) {
         // let theHeaders = new HttpHeaders().set('ontent-Type', 'plain/text');
         // let OPTIONS = { headers: theHeaders };
-        return this.httpClient.post(`${this.BASE_URL_ROOT}:8080/api/login?userEmail=` +
+        return this.httpClient.post(`${this.BASE_URL_ROOT}/api/login?userEmail=` +
             userEmail +
             '&userPass=' +
             userPass +
@@ -1446,7 +1446,7 @@ class LoginService {
     logout() {
         let theHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]().set('token', localStorage.getItem('token'));
         let options = { headers: theHeaders, responseType: 'text' };
-        return this.httpClient.get(`${this.BASE_URL_ROOT}:8080/api/client/logout`, options);
+        return this.httpClient.get(`${this.BASE_URL_ROOT}/api/client/logout`, options);
     }
 }
 LoginService.ɵfac = function LoginService_Factory(t) { return new (t || LoginService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
@@ -3706,7 +3706,7 @@ class CompanyService {
         let theHeaders = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"]().set('token', theToken);
         let options = { headers: theHeaders, responseType: 'text' };
         //===========================================================
-        return this.httpClient.post(`${this.BASE_URL}:8080/api/company/add`, coupon, options);
+        return this.httpClient.post(`${this.BASE_URL}/api/company/add`, coupon, options);
     }
     updateCoupon(coupon, couponId) {
         //===========================================================
