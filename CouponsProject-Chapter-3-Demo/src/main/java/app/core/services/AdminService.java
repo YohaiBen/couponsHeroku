@@ -46,7 +46,7 @@ public class AdminService extends ClientService {
 	 */
 	public Company addCompany(Company company) throws CouponSystemException {
 		List<Company> listByNameOrEmail = companyRepository.findByNameOrEmail(company.getName(), company.getEmail());
-		if (listByNameOrEmail != null) {
+		if (listByNameOrEmail.size() > 0) {
 			throw new CouponSystemException(
 					"company cannot added, there is already a company with the same name/email in DB");
 		}
@@ -103,7 +103,7 @@ public class AdminService extends ClientService {
 
 	public Customer addCustomer(Customer customer) throws CouponSystemException {
 		List<Customer> listByEmail = customerRepository.findByEmail(customer.getEmail());
-		if (listByEmail != null) {
+		if (listByEmail.size() > 0) {
 			throw new CouponSystemException(
 					"Customer cannot added, there is already a Customer with the same email in DB");
 		}
